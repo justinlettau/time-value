@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/justinlettau/time-value/compare/v1.0.1...v1.1.0) (2021-02-03)
+
+
+### Features
+
+* add sum method ([3b456c9](https://github.com/justinlettau/time-value/commit/3b456c9485450c5744938d3413ec3574c2436263))
+
 ### [1.0.1](https://github.com/justinlettau/time-value/compare/v1.0.0...v1.0.1) (2021-01-16)
 
 
