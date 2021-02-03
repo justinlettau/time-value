@@ -96,11 +96,11 @@ export class Time {
   }
 
   /**
-   * Parses a string representation (`hh:mm:ss`) of a time.
+   * Parses a time string (`hh:mm:ss`) into it's parts.
    *
-   * @param text String representation.
+   * @param text String value.
    */
-  static parse(text: string) {
+  private static _parse(text: string) {
     let isNegative = false;
 
     if (text.startsWith('-')) {
@@ -123,6 +123,42 @@ export class Time {
       minutes = -minutes;
       seconds = -seconds;
     }
+
+    return {
+      hours,
+      minutes,
+      seconds,
+    };
+  }
+
+  /**
+   * Parses a time string (`hh:mm:ss`) into an instance of Time.
+   *
+   * @param text String value.
+   */
+  static parse(text: string) {
+    const { hours, minutes, seconds } = Time._parse(text);
+
+    return new Time(hours, minutes, seconds);
+  }
+
+  /**
+   *Parse a collection of time strings (`hh:mm:ss`) and sum their values into one instance of Time.
+   *
+   * @param texts Collection of string values.
+   */
+  static sum(texts: string[]) {
+    let hours = 0;
+    let minutes = 0;
+    let seconds = 0;
+
+    texts.forEach((value) => {
+      const item = Time._parse(value);
+
+      hours += item.hours;
+      minutes += item.minutes;
+      seconds += item.seconds;
+    });
 
     return new Time(hours, minutes, seconds);
   }

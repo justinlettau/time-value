@@ -43,6 +43,9 @@ const time2 = new Time(5, 8, 30);
 
 const time3 = time1.add(time2);
 // => 7 hrs, 38 mins, 40 secs
+
+const time4 = Time.sum(['05:30:00', '03:45:15']);
+// => 9 hrs, 15 mins, and 15 secs
 ```
 
 # Development

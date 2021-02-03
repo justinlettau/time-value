@@ -101,6 +101,36 @@ describe('Time', () => {
     });
   });
 
+  describe('sum method', () => {
+    test('should sum values', () => {
+      const time = Time.sum(['05:45:11', '-03:08:02', '01:42:40']);
+
+      expect(time.getHours()).toBe(4);
+      expect(time.getMinutes()).toBe(19);
+      expect(time.getSeconds()).toBe(49);
+    });
+
+    test('should sum values from hh:mm:ss', () => {
+      const time = Time.sum(['05:45:11', '03:08:02', '01:42:40']);
+
+      expect(time.getHours()).toBe(10);
+      expect(time.getMinutes()).toBe(35);
+      expect(time.getSeconds()).toBe(53);
+    });
+
+    test('should sum values from -hh:mm:ss', () => {
+      const time = Time.sum(['-05:45:11', '-03:08:02', '-01:42:40']);
+
+      expect(time.getHours()).toBe(-10);
+      expect(time.getMinutes()).toBe(-35);
+      expect(time.getSeconds()).toBe(-53);
+    });
+
+    test('should throw error on invalid value', () => {
+      expect(() => Time.sum(['05:45:11', 'invalid'])).toThrow('Could not parse "invalid"');
+    });
+  });
+
   describe('add method', () => {
     test('should return new instance', () => {
       const time1 = new Time();
