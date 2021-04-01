@@ -126,6 +126,14 @@ describe('Time', () => {
       expect(time.getSeconds()).toBe(-53);
     });
 
+    test('should ignore null values', () => {
+      const time = Time.sum(['03:11:23', null, '01:12:17']);
+
+      expect(time.getHours()).toBe(4);
+      expect(time.getMinutes()).toBe(23);
+      expect(time.getSeconds()).toBe(40);
+    });
+
     test('should throw error on invalid value', () => {
       expect(() => Time.sum(['05:45:11', 'invalid'])).toThrow('Could not parse "invalid"');
     });

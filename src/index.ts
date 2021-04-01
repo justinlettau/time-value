@@ -143,22 +143,24 @@ export class Time {
   }
 
   /**
-   *Parse a collection of time strings (`hh:mm:ss`) and sum their values into one instance of Time.
+   * Parse a collection of time strings (`hh:mm:ss`) and sum their values into one instance of Time.
    *
    * @param texts Collection of string values.
    */
-  static sum(texts: string[]) {
+  static sum(texts: (string | null)[]) {
     let hours = 0;
     let minutes = 0;
     let seconds = 0;
 
-    texts.forEach((value) => {
-      const item = Time._parse(value);
+    texts
+      .filter((value) => value !== null)
+      .forEach((value) => {
+        const item = Time._parse(value as string);
 
-      hours += item.hours;
-      minutes += item.minutes;
-      seconds += item.seconds;
-    });
+        hours += item.hours;
+        minutes += item.minutes;
+        seconds += item.seconds;
+      });
 
     return new Time(hours, minutes, seconds);
   }
