@@ -45,7 +45,7 @@
     "@justinlettau/renovate-config": "^0.1.2",
     "@types/jest": "^26.0.20",
     "eslint-config-prettier": "^7.1.0",
-    "eslint": "^7.17.0",
+    "eslint": "^7.18.0",
     "@typescript-eslint/parser": "^4.13.0",
     "@typescript-eslint/eslint-plugin": "^4.13.0",
     "del-cli": "^3.0.1",
