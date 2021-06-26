@@ -84,6 +84,27 @@ export class Time {
   }
 
   /**
+   * Returns the primitive value of a `Time`, in seconds.
+   */
+  valueOf() {
+    let value = 0;
+
+    if (this._hours) {
+      value += this._hours * 60 * 60;
+    }
+
+    if (this._minutes) {
+      value += this._minutes * 60;
+    }
+
+    if (this._seconds) {
+      value += this._seconds;
+    }
+
+    return value;
+  }
+
+  /**
    * Format time as `hh:mm:ss`.
    */
   toString() {

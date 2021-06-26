@@ -135,7 +135,9 @@ describe('Time', () => {
     });
 
     test('should throw error on invalid value', () => {
-      expect(() => Time.sum(['05:45:11', 'invalid'])).toThrow('Could not parse "invalid"');
+      expect(() => Time.sum(['05:45:11', 'invalid'])).toThrow(
+        'Could not parse "invalid"'
+      );
     });
   });
 
@@ -178,6 +180,22 @@ describe('Time', () => {
       expect(time3.getHours()).toBe(1);
       expect(time3.getMinutes()).toBe(27);
       expect(time3.getSeconds()).toBe(5);
+    });
+  });
+
+  describe('valueOf method', () => {
+    test('should return total seconds', () => {
+      const time1 = new Time();
+      const time2 = Time.parse('01:25:13');
+      const time3 = Time.parse('02:45');
+      const time4 = Time.parse('-05:05:03');
+      const time5 = Time.parse('-09:50');
+
+      expect(time1.valueOf()).toBe(0);
+      expect(time2.valueOf()).toBe(5113);
+      expect(time3.valueOf()).toBe(9900);
+      expect(time4.valueOf()).toBe(-18303);
+      expect(time5.valueOf()).toBe(-35400);
     });
   });
 
