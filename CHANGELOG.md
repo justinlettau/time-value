@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/justinlettau/time-value/compare/v1.1.1...v1.2.0) (2021-06-26)
+
+
+### Features
+
+* add valueOf method ([14013f4](https://github.com/justinlettau/time-value/commit/14013f4211ea726acc10f69c71dee953639de9b1))
+
 ### [1.1.1](https://github.com/justinlettau/time-value/compare/v1.1.0...v1.1.1) (2021-04-01)
 
 
