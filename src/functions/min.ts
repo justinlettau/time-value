@@ -6,13 +6,15 @@ import { Time } from '../time';
  * @param src Time values to compare.
  */
 export function min(src: Time[]) {
-  let min: Time | undefined;
+  let min: number | undefined;
 
   src.forEach((x) => {
-    if (!min || x.valueOf() < min.valueOf()) {
-      min = x;
+    const value = x.valueOf();
+
+    if (!min || value < min.valueOf()) {
+      min = value;
     }
   });
 
-  return min;
+  return min ? new Time(0, 0, min) : undefined;
 }

@@ -6,13 +6,15 @@ import { Time } from '../time';
  * @param src Time values to compare.
  */
 export function max(src: Time[]) {
-  let max: Time | undefined;
+  let max: number | undefined;
 
   src.forEach((x) => {
-    if (!max || x.valueOf() > max.valueOf()) {
-      max = x;
+    const value = x.valueOf();
+
+    if (!max || value > max.valueOf()) {
+      max = value;
     }
   });
 
-  return max;
+  return max ? new Time(0, 0, max) : undefined;
 }
