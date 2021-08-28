@@ -1,5 +1,5 @@
-import { Time } from '../time';
-import { max } from './max';
+import Time from '../time';
+import max from './max';
 
 describe('max function', () => {
   test('should return max value', () => {

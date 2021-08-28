@@ -1,5 +1,5 @@
-import { Time } from '../time';
-import { sum } from './sum';
+import Time from '../time';
+import sum from './sum';
 
 describe('sum function', () => {
   test('should return sum value', () => {

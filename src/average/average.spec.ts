@@ -1,5 +1,5 @@
-import { Time } from '../time';
-import { average } from './average';
+import Time from '../time';
+import average from './average';
 
 describe('average function', () => {
   test('should return average value', () => {

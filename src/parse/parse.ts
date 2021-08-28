@@ -1,11 +1,11 @@
-import { Time } from '../time';
+import Time from '../time';
 
 /**
  * Parses a time string (`hh:mm:ss`) into it's parts.
  *
  * @param src String value.
  */
-export function parse(src: string | null) {
+export default function parse(src: string | null) {
   let isNegative = false;
 
   if (src == null) {

@@ -35,7 +35,7 @@ npm install time-value --save
 Create an instance of `Time` with hours, minutes, and seconds.
 
 ```ts
-import { Time } from 'time-value';
+import Time from 'time-value';
 
 new Time(5, 8, 30);
 // => 5 hrs, 8 mins, and 30 secs
@@ -56,7 +56,7 @@ parse('02:30:08');
 Immutable and pure functions for common operations.
 
 ```ts
-import { Time, average, max, min, sum } from 'time-value';
+import Time, { average, max, min, sum } from 'time-value';
 
 const time1 = new Time(8, 3, 10);
 const time2 = new Time(1, 0, 45);

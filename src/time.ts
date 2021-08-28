@@ -3,7 +3,7 @@ import { TimeParts } from './time-parts';
 /**
  * Represents an amount of time.
  */
-export class Time {
+export default class Time {
   constructor(parts?: TimeParts);
   constructor(hours?: number, minutes?: number, seconds?: number);
   constructor(...args: unknown[]) {

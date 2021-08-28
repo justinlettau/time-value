@@ -1,4 +1,4 @@
-import { parse } from './parse';
+import parse from './parse';
 
 describe('parse function', () => {
   test('should return instance from null', () => {

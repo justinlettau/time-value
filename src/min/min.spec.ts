@@ -1,5 +1,5 @@
-import { Time } from '../time';
-import { min } from './min';
+import Time from '../time';
+import min from './min';
 
 describe('min function', () => {
   test('should return min value', () => {
