@@ -1,5 +1,3 @@
-import { parse, sum } from './functions';
-
 /**
  * Represents an amount of time.
  */
@@ -116,27 +114,5 @@ export class Time {
       .join(':');
 
     return sign + time;
-  }
-
-  /**
-   * Parses a time string (`hh:mm:ss`) into an instance of Time.
-   *
-   * @deprecated Use `parse` function instead.
-   *
-   * @param text String value.
-   */
-  static parse(text: string) {
-    return parse(text);
-  }
-
-  /**
-   * Parse a collection of time strings (`hh:mm:ss`) and sum their values into one instance of Time.
-   *
-   * @deprecated Use `sum` function instead.
-   *
-   * @param texts Collection of string values.
-   */
-  static sum(texts: (string | null)[]) {
-    return sum(texts.filter((x) => x !== null).map((x) => parse(x as string)));
   }
 }

@@ -63,84 +63,6 @@ describe('Time', () => {
     });
   });
 
-  describe('parse method', () => {
-    test('should return instance from hh:mm:ss', () => {
-      const time = Time.parse('02:30:08');
-
-      expect(time.getHours()).toBe(2);
-      expect(time.getMinutes()).toBe(30);
-      expect(time.getSeconds()).toBe(8);
-    });
-
-    test('should return instance from hh:mm', () => {
-      const time = Time.parse('02:30');
-
-      expect(time.getHours()).toBe(2);
-      expect(time.getMinutes()).toBe(30);
-      expect(time.getSeconds()).toBe(0);
-    });
-
-    test('should return instance from -hh:mm:ss', () => {
-      const time = Time.parse('-02:30:08');
-
-      expect(time.getHours()).toBe(-2);
-      expect(time.getMinutes()).toBe(-30);
-      expect(time.getSeconds()).toBe(-8);
-    });
-
-    test('should return instance from -hh:mm:ss', () => {
-      const time = Time.parse('-02:30');
-
-      expect(time.getHours()).toBe(-2);
-      expect(time.getMinutes()).toBe(-30);
-      expect(time.getSeconds()).toBe(-0);
-    });
-
-    test('should throw error on invalid value', () => {
-      expect(() => Time.parse('invalid')).toThrow('Could not parse "invalid"');
-    });
-  });
-
-  describe('sum method', () => {
-    test('should sum values', () => {
-      const time = Time.sum(['05:45:11', '-03:08:02', '01:42:40']);
-
-      expect(time.getHours()).toBe(4);
-      expect(time.getMinutes()).toBe(19);
-      expect(time.getSeconds()).toBe(49);
-    });
-
-    test('should sum values from hh:mm:ss', () => {
-      const time = Time.sum(['05:45:11', '03:08:02', '01:42:40']);
-
-      expect(time.getHours()).toBe(10);
-      expect(time.getMinutes()).toBe(35);
-      expect(time.getSeconds()).toBe(53);
-    });
-
-    test('should sum values from -hh:mm:ss', () => {
-      const time = Time.sum(['-05:45:11', '-03:08:02', '-01:42:40']);
-
-      expect(time.getHours()).toBe(-10);
-      expect(time.getMinutes()).toBe(-35);
-      expect(time.getSeconds()).toBe(-53);
-    });
-
-    test('should ignore null values', () => {
-      const time = Time.sum(['03:11:23', null, '01:12:17']);
-
-      expect(time.getHours()).toBe(4);
-      expect(time.getMinutes()).toBe(23);
-      expect(time.getSeconds()).toBe(40);
-    });
-
-    test('should throw error on invalid value', () => {
-      expect(() => Time.sum(['05:45:11', 'invalid'])).toThrow(
-        'Could not parse "invalid"'
-      );
-    });
-  });
-
   describe('add method', () => {
     test('should return new instance', () => {
       const time1 = new Time();
@@ -186,10 +108,10 @@ describe('Time', () => {
   describe('valueOf method', () => {
     test('should return total seconds', () => {
       const time1 = new Time();
-      const time2 = Time.parse('01:25:13');
-      const time3 = Time.parse('02:45');
-      const time4 = Time.parse('-05:05:03');
-      const time5 = Time.parse('-09:50');
+      const time2 = new Time(1, 25, 13);
+      const time3 = new Time(2, 45);
+      const time4 = new Time(-5, 5, 3);
+      const time5 = new Time(-9, 50);
 
       expect(time1.valueOf()).toBe(0);
       expect(time2.valueOf()).toBe(5113);
@@ -201,10 +123,10 @@ describe('Time', () => {
 
   describe('toString method', () => {
     test('should return formatted string', () => {
-      const time1 = Time.parse('01:25:13');
-      const time2 = Time.parse('02:45');
-      const time3 = Time.parse('-05:05:03');
-      const time4 = Time.parse('-09:50');
+      const time1 = new Time(1, 25, 13);
+      const time2 = new Time(2, 45);
+      const time3 = new Time(-5, 5, 3);
+      const time4 = new Time(-9, 50);
 
       expect(time1.toString()).toBe('01:25:13');
       expect(time2.toString()).toBe('02:45:00');
