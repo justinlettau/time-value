@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/justinlettau/time-value/compare/v1.2.0...v2.0.0) (2021-08-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* Remove `add` and `sub` instance methods. Use modular functions instead.
+* Remove `parse` and `sum` static methods. Use modular functions instead.
+
+### Features
+
+* add constructor overloads ([acad675](https://github.com/justinlettau/time-value/commit/acad675c5420be580ef82c29bff7cfbf8dcdedfd))
+* add modular functions ([98acb71](https://github.com/justinlettau/time-value/commit/98acb71209c4c344a6acf26dbf4ca98924ac5d9d))
+* default exports ([f7609de](https://github.com/justinlettau/time-value/commit/f7609ded3373ebfe643926fd62a01b44f34110be))
+* remove add/sub methods ([42f78d4](https://github.com/justinlettau/time-value/commit/42f78d4c25314b0a2b498a43482a4ac43d4ab83b))
+* remove static methods ([e2e0d91](https://github.com/justinlettau/time-value/commit/e2e0d919e0e0fd990aca7b708caab32f5a3281c4))
+
+
+### Bug Fixes
+
+* allow null arg on parse function ([5a11fb7](https://github.com/justinlettau/time-value/commit/5a11fb7e5c5c07157cae3f98188b6e05dd9db417))
+
 ## [1.2.0](https://github.com/justinlettau/time-value/compare/v1.1.1...v1.2.0) (2021-06-26)
 
 
