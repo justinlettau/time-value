@@ -12,5 +12,5 @@ export function sum(src: Time[]) {
     total += x.valueOf();
   });
 
-  return new Time(0, 0, total);
+  return new Time({ seconds: total });
 }

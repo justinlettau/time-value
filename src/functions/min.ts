@@ -16,5 +16,5 @@ export function min(src: Time[]) {
     }
   });
 
-  return min ? new Time(0, 0, min) : undefined;
+  return min ? new Time({ seconds: min }) : undefined;
 }

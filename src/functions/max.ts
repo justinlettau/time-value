@@ -16,5 +16,5 @@ export function max(src: Time[]) {
     }
   });
 
-  return max ? new Time(0, 0, max) : undefined;
+  return max ? new Time({ seconds: max }) : undefined;
 }

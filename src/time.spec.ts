@@ -10,7 +10,7 @@ describe('Time', () => {
       expect(time.getSeconds()).toBe(0);
     });
 
-    test('should return instance from hh:mm:ss', () => {
+    test('should return instance from (h, m, s)', () => {
       const time1 = new Time(4, 18, 25);
 
       expect(time1.getHours()).toBe(4);
@@ -18,8 +18,32 @@ describe('Time', () => {
       expect(time1.getSeconds()).toBe(25);
     });
 
-    test('should return instance from hh:mm', () => {
+    test('should return instance from (h, m)', () => {
       const time1 = new Time(4, 18);
+
+      expect(time1.getHours()).toBe(4);
+      expect(time1.getMinutes()).toBe(18);
+      expect(time1.getSeconds()).toBe(0);
+    });
+
+    test('should return instance from (h)', () => {
+      const time1 = new Time(4);
+
+      expect(time1.getHours()).toBe(4);
+      expect(time1.getMinutes()).toBe(0);
+      expect(time1.getSeconds()).toBe(0);
+    });
+
+    test('should return instance from { h, m, s }', () => {
+      const time1 = new Time({ hours: 4, minutes: 18, seconds: 25 });
+
+      expect(time1.getHours()).toBe(4);
+      expect(time1.getMinutes()).toBe(18);
+      expect(time1.getSeconds()).toBe(25);
+    });
+
+    test('should return instance from { h, m }', () => {
+      const time1 = new Time({ hours: 4, minutes: 18 });
 
       expect(time1.getHours()).toBe(4);
       expect(time1.getMinutes()).toBe(18);

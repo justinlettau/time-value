@@ -1,8 +1,30 @@
+import { TimeParts } from './interfaces';
+
 /**
  * Represents an amount of time.
  */
 export class Time {
-  constructor(hours = 0, minutes = 0, seconds = 0) {
+  constructor(parts?: TimeParts);
+  constructor(hours?: number, minutes?: number, seconds?: number);
+  constructor(...args: unknown[]) {
+    let hours: number;
+    let minutes: number;
+    let seconds: number;
+
+    if (args.length === 1 && typeof args[0] === 'object') {
+      const parts = args[0] as TimeParts;
+
+      hours = parts?.hours || 0;
+      minutes = parts?.minutes || 0;
+      seconds = parts?.seconds || 0;
+    } else {
+      const parts = args as (number | undefined)[];
+
+      hours = parts[0] || 0;
+      minutes = parts[1] || 0;
+      seconds = parts[2] || 0;
+    }
+
     const isNegative = hours < 0 || minutes < 0 || seconds < 0;
 
     hours = Math.abs(hours);
@@ -25,36 +47,36 @@ export class Time {
       seconds = -seconds;
     }
 
-    this._hours = hours;
-    this._minutes = minutes;
-    this._seconds = seconds;
+    this.hours = hours;
+    this.minutes = minutes;
+    this.seconds = seconds;
     this.isNegative = isNegative;
   }
 
-  private readonly _hours: number;
-  private readonly _minutes: number;
-  private readonly _seconds: number;
+  private readonly hours: number;
+  private readonly minutes: number;
+  private readonly seconds: number;
   private readonly isNegative: boolean;
 
   /**
    * Get hours.
    */
   getHours() {
-    return this._hours;
+    return this.hours;
   }
 
   /**
    * Get minutes.
    */
   getMinutes() {
-    return this._minutes;
+    return this.minutes;
   }
 
   /**
    * Get seconds.
    */
   getSeconds() {
-    return this._seconds;
+    return this.seconds;
   }
 
   /**
@@ -63,9 +85,9 @@ export class Time {
    * @param value Time value to add.
    */
   add(value: Time) {
-    const hours = this._hours + value._hours;
-    const minutes = this._minutes + value._minutes;
-    const seconds = this._seconds + value._seconds;
+    const hours = this.hours + value.hours;
+    const minutes = this.minutes + value.minutes;
+    const seconds = this.seconds + value.seconds;
 
     return new Time(hours, minutes, seconds);
   }
@@ -76,9 +98,9 @@ export class Time {
    * @param value Time value to subtract.
    */
   sub(value: Time) {
-    const hours = this._hours - value._hours;
-    const minutes = this._minutes - value._minutes;
-    const seconds = this._seconds - value._seconds;
+    const hours = this.hours - value.hours;
+    const minutes = this.minutes - value.minutes;
+    const seconds = this.seconds - value.seconds;
 
     return new Time(hours, minutes, seconds);
   }
@@ -89,16 +111,16 @@ export class Time {
   valueOf() {
     let value = 0;
 
-    if (this._hours) {
-      value += this._hours * 60 * 60;
+    if (this.hours) {
+      value += this.hours * 60 * 60;
     }
 
-    if (this._minutes) {
-      value += this._minutes * 60;
+    if (this.minutes) {
+      value += this.minutes * 60;
     }
 
-    if (this._seconds) {
-      value += this._seconds;
+    if (this.seconds) {
+      value += this.seconds;
     }
 
     return value;
@@ -109,7 +131,7 @@ export class Time {
    */
   toString() {
     const sign = this.isNegative ? '-' : '';
-    const time = [this._hours, this._minutes, this._seconds]
+    const time = [this.hours, this.minutes, this.seconds]
       .map((x) => Math.abs(x).toString().padStart(2, '0'))
       .join(':');
 

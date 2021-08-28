@@ -13,5 +13,5 @@ export function average(src: Time[]) {
   });
 
   const seconds = Math.round(total / src.length);
-  return new Time(0, 0, seconds);
+  return new Time({ seconds });
 }
