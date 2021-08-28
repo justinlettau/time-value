@@ -80,32 +80,6 @@ export class Time {
   }
 
   /**
-   * Add a time value.
-   *
-   * @param value Time value to add.
-   */
-  add(value: Time) {
-    const hours = this.hours + value.hours;
-    const minutes = this.minutes + value.minutes;
-    const seconds = this.seconds + value.seconds;
-
-    return new Time(hours, minutes, seconds);
-  }
-
-  /**
-   * Subtract a time value.
-   *
-   * @param value Time value to subtract.
-   */
-  sub(value: Time) {
-    const hours = this.hours - value.hours;
-    const minutes = this.minutes - value.minutes;
-    const seconds = this.seconds - value.seconds;
-
-    return new Time(hours, minutes, seconds);
-  }
-
-  /**
    * Returns the primitive value of a `Time`, in seconds.
    */
   valueOf() {

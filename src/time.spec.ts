@@ -87,48 +87,6 @@ describe('Time', () => {
     });
   });
 
-  describe('add method', () => {
-    test('should return new instance', () => {
-      const time1 = new Time();
-      const time2 = new Time();
-      const time3 = time1.add(time2);
-
-      expect(time3 === time1).toBe(false);
-      expect(time3 === time2).toBe(false);
-    });
-
-    test('should add values', () => {
-      const time1 = new Time(3, 32, 15);
-      const time2 = new Time(2, 5, 10);
-      const time3 = time1.add(time2);
-
-      expect(time3.getHours()).toBe(5);
-      expect(time3.getMinutes()).toBe(37);
-      expect(time3.getSeconds()).toBe(25);
-    });
-  });
-
-  describe('sub method', () => {
-    test('should return new instance', () => {
-      const time1 = new Time();
-      const time2 = new Time();
-      const time3 = time1.sub(time2);
-
-      expect(time3 === time1).toBe(false);
-      expect(time3 === time2).toBe(false);
-    });
-
-    test('should subtract values', () => {
-      const time1 = new Time(3, 32, 15);
-      const time2 = new Time(2, 5, 10);
-      const time3 = time1.sub(time2);
-
-      expect(time3.getHours()).toBe(1);
-      expect(time3.getMinutes()).toBe(27);
-      expect(time3.getSeconds()).toBe(5);
-    });
-  });
-
   describe('valueOf method', () => {
     test('should return total seconds', () => {
       const time1 = new Time();
