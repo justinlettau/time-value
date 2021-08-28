@@ -1,4 +1,4 @@
-import { TimeParts } from './interfaces';
+import { TimeParts } from './time-parts';
 
 /**
  * Represents an amount of time.
