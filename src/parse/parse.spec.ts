@@ -1,6 +1,14 @@
 import { parse } from './parse';
 
 describe('parse function', () => {
+  test('should return instance from null', () => {
+    const time = parse(null);
+
+    expect(time.getHours()).toBe(0);
+    expect(time.getMinutes()).toBe(0);
+    expect(time.getSeconds()).toBe(0);
+  });
+
   test('should return instance from hh:mm:ss', () => {
     const time = parse('02:30:08');
 

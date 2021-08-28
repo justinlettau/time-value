@@ -5,8 +5,12 @@ import { Time } from '../time';
  *
  * @param src String value.
  */
-export function parse(src: string) {
+export function parse(src: string | null) {
   let isNegative = false;
+
+  if (src == null) {
+    return new Time();
+  }
 
   if (src.startsWith('-')) {
     isNegative = true;
