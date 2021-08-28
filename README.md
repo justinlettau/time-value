@@ -35,22 +35,43 @@ npm install time-value --save
 ```ts
 import { Time } from 'time-value';
 
-const time1 = Time.parse('02:30:10');
-// => 2 hrs, 30 mins, and 10 secs
-
-const time2 = new Time(5, 8, 30);
+new Time(5, 8, 30);
 // => 5 hrs, 8 mins, and 30 secs
 
-const time3 = time1.add(time2);
-// => 7 hrs, 38 mins, 40 secs
+new Time({ hours: 11, minutes: 23, seconds: 9 });
+// => 11 hrs, 23 mins, and 9 secs
+```
 
-const time4 = Time.sum(['05:30:00', '03:45:15']);
-// => 9 hrs, 15 mins, and 15 secs
+```ts
+import { parse } from 'time-value';
+
+parse('02:30:08');
+// => 2 hrs, 30 mins, and 08 secs
+```
+
+```ts
+import { Time, average, max, min, sum } from 'time-value';
+
+const time1 = new Time(8, 3, 10);
+const time2 = new Time(1, 0, 45);
+const time3 = new Time(5, 51, 6);
+
+average([time1, time2, time3]);
+// => 4 hrs, 58 mins, and 20 secs
+
+max([time1, time2, time3]);
+// => 8 hrs, 3 mins, and 10 secs
+
+min([time1, time2, time3]);
+// => 1 hrs, 0 mins, and 45 secs
+
+sum([time1, time2, time3]);
+// => 14 hrs, 55 mins, and 1 secs
 ```
 
 # Development
 
 ```
-npm install
+npm ci
 npm run build
 ```
