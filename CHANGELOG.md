@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/justinlettau/time-value/compare/v2.0.0...v2.1.0) (2021-08-29)
+
+
+### Features
+
+* output esm ([c7983a1](https://github.com/justinlettau/time-value/commit/c7983a118751859d14f68115bddbb8b64d0d1b59))
+
 ## [2.0.0](https://github.com/justinlettau/time-value/compare/v1.2.0...v2.0.0) (2021-08-28)
 
 

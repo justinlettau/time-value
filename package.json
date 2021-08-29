@@ -1,6 +1,6 @@
 {
   "name": "time-value",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "An immutable library for parsing and manipulating an amount of time.",
   "keywords": [
     "time",
