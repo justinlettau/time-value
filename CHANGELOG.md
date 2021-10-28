@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/justinlettau/time-value/compare/v2.1.1...v3.0.0) (2021-10-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* This package is now pure ESM
+
+### Features
+
+* esm package ([1a24555](https://github.com/justinlettau/time-value/commit/1a245559ab80c49c7cdd9d3d35b0eb6391bde00a))
+
 ### [2.1.1](https://github.com/justinlettau/time-value/compare/v2.1.0...v2.1.1) (2021-08-31)
 
 ## [2.1.0](https://github.com/justinlettau/time-value/compare/v2.0.0...v2.1.0) (2021-08-29)
