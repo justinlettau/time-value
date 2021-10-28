@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.1](https://github.com/justinlettau/time-value/compare/v3.0.0...v3.0.1) (2021-10-28)
+
+
+### Bug Fixes
+
+* module output ([ad6ff7e](https://github.com/justinlettau/time-value/commit/ad6ff7e8d8441d4976def1b74d1ef2300c194db4))
+
 ## [3.0.0](https://github.com/justinlettau/time-value/compare/v2.1.1...v3.0.0) (2021-10-28)
 
 
