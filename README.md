@@ -1,7 +1,6 @@
 [![NPM Version](https://badge.fury.io/js/time-value.svg)](https://badge.fury.io/js/time-value)
 [![CI](https://github.com/justinlettau/time-value/workflows/CI/badge.svg)](https://github.com/justinlettau/time-value/actions)
 [![codecov](https://codecov.io/gh/justinlettau/time-value/branch/master/graph/badge.svg)](https://codecov.io/gh/justinlettau/time-value)
-[![Dev Dependency Status](https://david-dm.org/justinlettau/time-value/dev-status.svg)](https://david-dm.org/justinlettau/time-value?type=dev)
 
 # Time Value
 
