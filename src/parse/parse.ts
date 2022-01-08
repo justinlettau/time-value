@@ -1,4 +1,4 @@
-import Time from '../time';
+import Time from '../time.js';
 
 /**
  * Parses a time string (`hh:mm:ss`) into it's parts.

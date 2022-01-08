@@ -1,11 +1,11 @@
-import Time from './time';
+import Time from './time.js';
 
 export default Time;
 export { Time };
 
-export * from './average';
-export * from './max';
-export * from './min';
-export * from './parse';
-export * from './sum';
-export * from './time-parts';
+export * from './average/index.js';
+export * from './max/index.js';
+export * from './min/index.js';
+export * from './parse/index.js';
+export * from './sum/index.js';
+export * from './time-parts.js';

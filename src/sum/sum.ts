@@ -1,4 +1,4 @@
-import Time from '../time';
+import Time from '../time.js';
 
 /**
  * Returns the sum of the given times.

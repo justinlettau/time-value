@@ -1,4 +1,4 @@
-import sum from './sum';
+import sum from './sum.js';
 
 export { sum };
 export default sum;

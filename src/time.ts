@@ -1,4 +1,4 @@
-import { TimeParts } from './time-parts';
+import { TimeParts } from './time-parts.js';
 
 /**
  * Represents an amount of time.

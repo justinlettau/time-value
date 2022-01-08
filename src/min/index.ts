@@ -1,4 +1,4 @@
-import min from './min';
+import min from './min.js';
 
 export { min };
 export default min;
