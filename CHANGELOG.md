@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.2](https://github.com/justinlettau/time-value/compare/v3.0.1...v3.0.2) (2022-01-08)
+
+
+### Bug Fixes
+
+* esm import extensions ([4658831](https://github.com/justinlettau/time-value/commit/4658831d54182179a290b5350596c0d74b611688))
+
 ### [3.0.1](https://github.com/justinlettau/time-value/compare/v3.0.0...v3.0.1) (2021-10-28)
 
 
