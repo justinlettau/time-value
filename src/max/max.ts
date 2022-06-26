@@ -6,7 +6,7 @@ import Time from '../time.js';
  * @param src Time values to compare.
  */
 export default function max(src: Time[]) {
-  let max: number | undefined;
+  let max = 0;
 
   src.forEach((x) => {
     const value = x.valueOf();
@@ -16,5 +16,5 @@ export default function max(src: Time[]) {
     }
   });
 
-  return max ? new Time({ seconds: max }) : undefined;
+  return new Time({ seconds: max });
 }

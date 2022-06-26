@@ -9,6 +9,12 @@ describe('max function', () => {
       new Time(5, 51, 6),
     ]);
 
-    expect(result?.toString()).toBe('08:03:10');
+    expect(result.toString()).toBe('08:03:10');
+  });
+
+  test('should return empty value when src is empty', () => {
+    const result = max([]);
+
+    expect(result.toString()).toBe('00:00:00');
   });
 });

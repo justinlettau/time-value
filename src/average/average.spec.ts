@@ -11,4 +11,10 @@ describe('average function', () => {
 
     expect(result.toString()).toBe('04:58:20');
   });
+
+  test('should return empty value when src is empty', () => {
+    const result = average([]);
+
+    expect(result.toString()).toBe('00:00:00');
+  });
 });

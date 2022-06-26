@@ -9,6 +9,12 @@ describe('min function', () => {
       new Time(5, 51, 6),
     ]);
 
-    expect(result?.toString()).toBe('01:00:45');
+    expect(result.toString()).toBe('01:00:45');
+  });
+
+  test('should return empty value when src is empty', () => {
+    const result = min([]);
+
+    expect(result.toString()).toBe('00:00:00');
   });
 });

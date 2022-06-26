@@ -6,7 +6,7 @@ import Time from '../time.js';
  * @param src Time values to compare.
  */
 export default function min(src: Time[]) {
-  let min: number | undefined;
+  let min = 0;
 
   src.forEach((x) => {
     const value = x.valueOf();
@@ -16,5 +16,5 @@ export default function min(src: Time[]) {
     }
   });
 
-  return min ? new Time({ seconds: min }) : undefined;
+  return new Time({ seconds: min });
 }
