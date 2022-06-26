@@ -4,6 +4,7 @@ export default Time;
 export { Time };
 
 export * from './average/index.js';
+export * from './is-empty/index.js';
 export * from './max/index.js';
 export * from './min/index.js';
 export * from './parse/index.js';

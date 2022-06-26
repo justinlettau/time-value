@@ -55,7 +55,7 @@ parse('02:30:08');
 Immutable and pure functions for common operations.
 
 ```ts
-import Time, { average, max, min, sum } from 'time-value';
+import Time, { average, max, min, sum, isEmpty } from 'time-value';
 
 const time1 = new Time(8, 3, 10);
 const time2 = new Time(1, 0, 45);
@@ -72,6 +72,9 @@ min([time1, time2, time3]);
 
 sum([time1, time2, time3]);
 // => 14 hrs, 55 mins, and 1 secs
+
+isEmpty(time1);
+// => false
 ```
 
 # Development
