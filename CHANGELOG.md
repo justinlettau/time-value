@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://github.com/justinlettau/time-value/compare/v3.0.2...v3.1.0) (2022-06-26)
+
+
+### Features
+
+* is-empty function ([1db58d7](https://github.com/justinlettau/time-value/commit/1db58d7f63c388f894c97586ee08c4ce0063f5cf))
+
+
+### Bug Fixes
+
+* return empty value, not undefined ([10f069d](https://github.com/justinlettau/time-value/commit/10f069d0f71542d0a8c7f3394ed56599a77a814f))
+
 ### [3.0.2](https://github.com/justinlettau/time-value/compare/v3.0.1...v3.0.2) (2022-01-08)
 
 
